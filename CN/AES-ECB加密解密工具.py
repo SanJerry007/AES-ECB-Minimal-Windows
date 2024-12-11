@@ -2,7 +2,7 @@
 # Copyright (c) 2024, SanJerry007
 # Licensed under the GNU General Public License v3.0.
 # See the LICENSE file on https://www.gnu.org/licenses/gpl-3.0.html for details.
-# Project repository: https://github.com/SanJerry007/AES-ECB-Minimal-Windows/tree/main
+# Project repository: https://github.com/SanJerry007/AES-ECB-Minimal-Windows
 #####################################################################
 
 import base64
