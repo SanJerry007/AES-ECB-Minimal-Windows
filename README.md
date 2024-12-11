@@ -27,7 +27,7 @@ pyinstaller ./EN/AES-ECB-Tool.py --onefile
 
 ## 支持功能
 
-- 基础的 AES-EBC 加密解密算法
+- 基础的 AES-ECB 加密解密算法
 - Windows 下的可视化操作界面
 - 支持不同长度的密钥:
   - 128bit (16字符)
