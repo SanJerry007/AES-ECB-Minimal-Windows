@@ -1,6 +1,6 @@
 # AES-ECB加密算法最小化实现
 
-[\[English\]](https://github.com/SanJerry007/AES-ECB-Minimal-Windows/tree/main/README-en.md)  |  [\[中文\]](https://github.com/SanJerry007/AES-ECB-Minimal-Windows/tree/main/README.md)
+[\[English\]](https://github.com/SanJerry007/AES-ECB-Minimal-Windows/blob/master/README-en.md)  |  [\[中文\]](https://github.com/SanJerry007/AES-ECB-Minimal-Windows/blob/master/README.md)
 
 最小化的AES-ECB加密解密算法实现(Python)，同时提供了在Windows下运行的exe文件。
 
