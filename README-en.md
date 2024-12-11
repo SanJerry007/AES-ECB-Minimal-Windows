@@ -1,6 +1,6 @@
 # Minimal Implementation of AES-ECB in Python for Windows
 
-[\[English\]](https://github.com/SanJerry007/AES-ECB-Minimal-Windows/tree/main/README-en.md)  |  [\[中文\]](https://github.com/SanJerry007/AES-ECB-Minimal-Windows/tree/main/README.md)
+[\[English\]](https://github.com/SanJerry007/AES-ECB-Minimal-Windows/blob/master/README-en.md)  |  [\[中文\]](https://github.com/SanJerry007/AES-ECB-Minimal-Windows/blob/master/README.md)
 
 A simple and minimal implementation of the AES-ECB encryption and decryption algorithm in Python, including an executable file with a visual interface for direct use on Windows systems.
 
