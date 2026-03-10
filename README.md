@@ -20,7 +20,7 @@ pip install crypto
 
 ```shell
 pip install pyinstaller
-pyinstaller ./EN/AES-ECB-Tool.py --onefile
+pyinstaller ./CN/AES-ECB加密解密工具.py --onefile --windowed
 ```
 
 之后你应该就可以在 `./dist/AES-ECB加密解密工具.exe` 找到可执行文件了。

@@ -10,7 +10,7 @@ import random
 import tkinter as tk
 from tkinter import messagebox, ttk
 
-from Cryptodome.Cipher import AES
+from Crypto.Cipher import AES
 
 
 class AESCipher:
