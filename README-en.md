@@ -20,7 +20,7 @@ To pack a Python script into a portable `.exe` file, I suggest using the [PyInst
 
 ```shell
 pip install pyinstaller
-pyinstaller ./EN/AES-ECB-Tool.py --onefile
+pyinstaller ./EN/AES-ECB-Tool.py --onefile --windowed
 ```
 
 Then the executable will be generated to `./dist/AES-ECB-Tool.exe`.
