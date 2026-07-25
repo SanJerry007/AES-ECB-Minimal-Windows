@@ -179,6 +179,7 @@ def gcm_decrypt(passphrase: str, token_str: str, input_format: str = "base64") -
 
 def main():
     KEY_LENGTHS = {"128bit(16byte)": 16, "192bit(24byte)": 24, "256bit(32byte)": 32}
+    GCM_KEY_WIDTH = 40  # GCM passphrase has arbitrary length; use a fixed wider entry
 
     def clear_results():
         encrypted_text.set("")
@@ -197,7 +198,7 @@ def main():
             # GCM: passphrase of any length, no key-length / padding selection needed
             key_length_combobox.config(state="disabled")
             padding_mode_combobox.config(state="disabled")
-            key_entry.config(validate="none")
+            key_entry.config(validate="none", width=GCM_KEY_WIDTH)
             key_label_var.set("Passphrase")
         else:  # ECB
             key_length_combobox.config(state="readonly")
@@ -207,7 +208,9 @@ def main():
 
     def update_key_length(*args):
         length = KEY_LENGTHS.get(key_length_combobox.get(), 32)
-        key_entry.config(validate="key", validatecommand=(root.register(limit_key_length), "%P", length))
+        # Entry width tracks the key length so it exactly fits that many key characters
+        key_entry.config(width=length, validate="key",
+                         validatecommand=(root.register(limit_key_length), "%P", length))
         if len(key_entry.get()) > length:
             key_entry.delete(length, "end")
 

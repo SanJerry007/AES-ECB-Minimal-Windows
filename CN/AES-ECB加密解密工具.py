@@ -176,6 +176,7 @@ def gcm_decrypt(passphrase: str, token_str: str, input_format: str = "base64") -
 
 def main():
     KEY_LENGTHS = {"128bit(16字符)": 16, "192bit(24字符)": 24, "256bit(32字符)": 32}
+    GCM_KEY_WIDTH = 40  # GCM 口令长度任意，用固定的较宽输入框
 
     def clear_results():
         encrypted_text.set("")
@@ -194,7 +195,7 @@ def main():
             # GCM：口令任意长度，无需选择密钥长度与填充模式
             key_length_combobox.config(state="disabled")
             padding_mode_combobox.config(state="disabled")
-            key_entry.config(validate="none")
+            key_entry.config(validate="none", width=GCM_KEY_WIDTH)
             key_label_var.set("输入口令")
         else:  # ECB
             key_length_combobox.config(state="readonly")
@@ -204,7 +205,9 @@ def main():
 
     def update_key_length(*args):
         length = KEY_LENGTHS.get(key_length_combobox.get(), 32)
-        key_entry.config(validate="key", validatecommand=(root.register(limit_key_length), "%P", length))
+        # 输入框宽度随密钥长度联动，正好容纳该长度的密钥字符
+        key_entry.config(width=length, validate="key",
+                         validatecommand=(root.register(limit_key_length), "%P", length))
         if len(key_entry.get()) > length:
             key_entry.delete(length, "end")
 
